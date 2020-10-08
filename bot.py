@@ -51,7 +51,7 @@ def echo_txt(update: Update, context: CallbackContext):
     print(json_res['list'][0]['example'])
     definition = (json_res['list'][0]['definition'])
     example = (json_res['list'][0]['example'])
-    word_data = "<b>What it means</b> \n"+definition+"\n\n <b>Example</b> \n"+example+"\n"
+    word_data = "<b>What it means</b> \n"+definition+"\n\n<b>Example</b> \n"+example+"\n"
 
     update.message.reply_text(word_data,parse_mode='html')
 
