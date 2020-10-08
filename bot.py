@@ -4,14 +4,15 @@ from telegram import Update
 import requests
 import json
 import os
-PORT = int(os.environ.get('PORT', 5000))
 
+PORT = int(os.environ.get('PORT', 5000))
+secrets=json.load(open("secrets.json"))
 #api header and url
 url = "https://mashape-community-urban-dictionary.p.rapidapi.com/define"
 
 headers = {
     'x-rapidapi-host': "mashape-community-urban-dictionary.p.rapidapi.com",
-    'x-rapidapi-key': "f5827a577dmsh0b4acc43b8cb0c6p15fb23jsn4644a355ed70"
+    'x-rapidapi-key': secrets["API_KEY"]
     }
 #enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
@@ -19,7 +20,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 
-TOKEN="1252429649:AAFZdpYMW8d2IaK-3LLqqc0we49gz7q05Is"
+TOKEN=secrets["TOKEN"]
 
 def start(update: Update, context: CallbackContext):
     # print(update)
