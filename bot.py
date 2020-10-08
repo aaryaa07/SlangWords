@@ -45,7 +45,8 @@ def echo_txt(update: Update, context: CallbackContext):
     print(json_res['list'][0]['example'])
     definition=(json_res['list'][0]['definition'])
     example=(json_res['list'][0]['example'])
-    word_data=definition+"\n\n"+example+"\n"
+    word_data="What it means \n"definition+"\n\n Example\n"+example+"\n"
+    
     update.message.reply_text(word_data)
 
 # def error(bot,update):
