@@ -53,7 +53,7 @@ def echo_txt(update: Update, context: CallbackContext):
 
 
 def main():
-    updater=Updater(TOKEN)
+    updater=Updater(os.environ.get('TOKEN'))
 
     dp=updater.dispatcher
     dp.add_handler(CommandHandler("start",start))
