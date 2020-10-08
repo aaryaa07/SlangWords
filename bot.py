@@ -11,7 +11,7 @@ url = "https://mashape-community-urban-dictionary.p.rapidapi.com/define"
 
 headers = {
     'x-rapidapi-host': "mashape-community-urban-dictionary.p.rapidapi.com",
-    'x-rapidapi-key': os.environ.get('API_KEY')
+    'x-rapidapi-key': "f5827a577dmsh0b4acc43b8cb0c6p15fb23jsn4644a355ed70"
     }
 #enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
