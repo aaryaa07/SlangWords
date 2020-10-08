@@ -53,7 +53,7 @@ def echo_txt(update: Update, context: CallbackContext):
     example = (json_res['list'][0]['example'])
     word_data = "**What it means** \n"+definition+"\n\n **Example** \n"+example+"\n"
 
-    update.message.reply_text(word_data)
+    update.message.reply_text(word_data,parse_mode='MarkdownV2')
 
 # def error(bot,update):
 #     logger.error("Error")
