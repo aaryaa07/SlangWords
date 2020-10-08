@@ -19,7 +19,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 
-TOKEN=os.environ.get('TOKEN')
+TOKEN="1252429649:AAFZdpYMW8d2IaK-3LLqqc0we49gz7q05Is"
 
 def start(update: Update, context: CallbackContext):
     # print(update)
@@ -53,7 +53,7 @@ def echo_txt(update: Update, context: CallbackContext):
 
 
 def main():
-    updater=Updater(os.environ.get('TOKEN'))
+    updater=Updater(TOKEN)
 
     dp=updater.dispatcher
     dp.add_handler(CommandHandler("start",start))
